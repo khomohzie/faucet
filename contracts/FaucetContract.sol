@@ -10,6 +10,9 @@ contract Faucet {
     // which means that they can be called via contracts and other tx.
     receive() external payable {}
 
+    // private -> can be accessible only within the smart contract
+    // internal -> can be accessible within the smart contract and derived smart contracts
+
     function addFunds() external payable {
         funders.push(msg.sender);
     }
